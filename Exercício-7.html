@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício7</title>
+  </head>
+  <body>
+    <p>Escreva uma função para ler um valor, via prompt, e alertar se é positivo ou negativo. Considere o valor zero como positivo.</p>
+      <script>
+        function VerificarPositivoNegativo(x){
+          if (x>=0){
+            return 'Este número é positivo';
+          }else{
+            return 'Este número é negativo';
+          }
+        }
+        do{
+            var numeroDigitado = prompt ("Digite um número para verficar se é POSITIVO ou NEGATIVO : ");
+          }while (numeroDigitado.charCodeAt(0)<=44 || numeroDigitado.charCodeAt(0)>=58);
+          alert(VerificarPositivoNegativo(numeroDigitado));
+      </script>
+  </body>
+</html>

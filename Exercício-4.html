@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício4</title>
+  </head>
+  <body>
+    <p>Escreva uma função que receba um parâmetro e informe se o mesmo é ou não um número inteiro.</p>
+      <script>
+        function verificarInteiro(x){
+          if (x == parseInt(x,10)==true){
+            return 'Este numero é inteiro';
+          }else{
+            return 'Este numero é decimal'
+          }
+        }
+        do{
+          var numeroDigitado = prompt("Digite um número:");
+          }while (numeroDigitado.charCodeAt(0)<=47 || numeroDigitado.charCodeAt(0)>=58);
+          alert(verificarInteiro(numeroDigitado));
+      </script>
+  </body>
+</html>

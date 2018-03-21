@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício15</title>
+  </head>
+  <body>
+    <p>Escreva um código que atenda os sequintes requisitos:<br>
+      Possua um objeto cliente, com as propriedades nome, sexo, data de nascimento, e endereço (sendo um objeto com as propriedades <br>
+      cep, logradouro, número, complemento, bairro, cidade, estado). Deve possuir um método que alerte todas as informações do cliente.<br><br>
+      Possua um objeto produto com as propriedades titulo, descrição e valor. Deve possuir um método que alerte seu nome e valor.<br><br>
+      Possua um objeto venda com as propriedades data, cliente, produtos, desconto e acréscimo. Deve existir um método que receba um objeto <br>
+      cliente e adicione-o a propriedade cliente. Deve ser possível adicionar n produtos, através de um método, que receba um objeto produto<br>
+      e uma quantidade, e adicione-os na propriedade produtos. Deve existir um método que retorne o um objeto com as propriedades valor dos<br>
+      produtos, e valor total, sendo este, a soma dos valores produtos vezes a quantidade, menos o desconto, mais o acréscimo.</p>
+        <script>
+          var cliente = {
+            Nome:'Vinicius',
+            Sexo:'Masculino',
+            DataNascimento:'01/05/1999',
+            Endereco:{
+            Cep:'86900000',
+            Logradouro:'Rua Inhauma',
+            Numero:'227',
+            Complemento:'Casa dos fundos',
+            Bairro:'Centro',
+            Cidade:'Maringá',
+            Estado:"Paraná",
+            },
+            showCliente:function(){
+              alert("Nome: " + this.Nome +"\nSexo: "+ this.Sexo + "\nData de Nascimento: " + this.DataNascimento + "\nCep: " + this.Endereco.Cep + "\nLogradouro: " + this.Endereco.Logradouro + "\nNúmero: "  + this.Endereco.Numero + "\nComplemento: " + this.Endereco.Complemento + "\nBairro: " + this.Endereco.Bairro + "\nCidade: " + this.Endereco.Cidade + "\nEstado: " + this.Endereco.Estado);
+              }
+            };
+        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          var produto = {
+            titulo: null,
+            descricao: null,
+            valor: null,
+            showProduto:function(){
+              alert("Nome: " + this.titulo + "\nValor: " + this.valor);
+              }
+            };
+        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          var venda = {
+            data: null,
+            cliente: null,
+            produtos: [],
+            desconto: 5.00,
+            acrescimo: 2.00,
+            atribuirCliente:function(cliente){
+            this.cliente = cliente;
+            },
+            atribuirProduto:function(produto,quantidade){
+              produtoAdicionado = {
+                quantidade:quantidade,
+                produto:produto
+                };
+              this.produto.push(produtoAdicionado);
+              },
+            retornarValor:function(produto){
+              var valorTotal = 0;
+              var auxiliar = 0;
+              this.produtos.forEach(function(item){
+                auxiliar = item.produto.valor * item.quantidade;
+                valorTotal = auxiliar + this.venda.acrescimo - this.venda.desconto;
+                })
+              this.produtos.forEach(function(item){
+                var total1 = (item.produto.titulo + "  " + item.quantidade + " R$ " + item.produto.valor);
+      			    var total2 = ("\nValor Total: \n" + valorTotal);
+      			    var total3 = ("\n\nAcrescimo: " + this.venda.acrescimo);
+      			    var total4 = ("Desconto: " + this.venda.desconto);
+                })
+              alert(total1 + total2 + total3 + total4);
+              }
+            };
+          </script>
+  </body>
+</html>

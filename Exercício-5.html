@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício5</title>
+  </head>
+  <body>
+    <p>Escreva uma função para ler uma temperatura em graus Fahrenheit, calcular e alertar o valor correspondente em graus Celsius. A temperatura deve ser inputada pelo usuário, via prompt.</p>
+      <script>
+        function converterCelsius(){
+          do{
+            var valorCelsius = prompt("Digite uma temperatura em Fahrenheit para converter em Celsius: ");
+          }while (valorCelsius.charCodeAt(0)<=47 || valorCelsius.charCodeAt(0)>=58);
+          resultado = (valorCelsius-32)/1.8;
+          return resultado;
+        }
+         alert("O resultado é: " + converterCelsius() + "°C");
+      </script>
+  </body>
+</html>

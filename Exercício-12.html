@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício12</title>
+  </head>
+  <body>
+    <p>Para cada conjunto de valores abaixo, escreva o código, usando laço(s), que preencha um array com os valores:<br>
+        10 9 8 7 6 5 4 3 2 1<br>
+        0 1 4 9 16 25 36 49 64 81 100<br>
+        1 2 3 4 5 10 20 30 40 50<br>
+        3 4 7 12 19 28 39 52 67 84<br>
+    </p>
+        <script>
+          function preencherArray(array){
+            newArray = [];
+            for(var x=0; x<=array.length;x++){
+              newArray.push(array[x]);
+            }
+            return newArray;
+          }
+          var primeiraLinha = [10,9,8,7,6,5,4,3,2,1];
+          var segundaLinha = [0,1,4,9,16,25,36,49,64,81,100];
+          var terceiraLinha = [1,2,3,4,5,10,20,30,40,50];
+          var quartaLinha = [3,4,7,12,19,28,39,52,67,84];
+          alert(preencherArray()); //Aqui você pode digitar qualquer linha acima para que o novo array seja feito.
+          //Não consegui entender o exercício direito mesmo pesquisando e fiz dessa maneira para não deixar em branco.
+
+        </script>
+
+  </body>
+</html>

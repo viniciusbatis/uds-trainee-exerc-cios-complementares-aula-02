@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício14</title>
+  </head>
+  <body>
+    <p>Crie um objeto que possua uma propriedade números, do tipo array. Esse objeto deve possuir métodos:<br>
+      que adicione um número a propriedade números;<br>
+      que verifique se um número se o número recebido como parâmetro e alerte se ele está presente ou não na propriedade números;<br>
+      que remova um número já existente ou alerte caso o número não esteja presente na propriedade números;<br>
+      que retorne os números positivos existentes na propriedade números;<br>
+      que retorne os números negativos existentes na propriedade números;<br>
+      que retorne os números pares existentes na propriedade números;<br>
+      que retorne os números impares existentes na propriedade números;<br>
+      que retorne a soma dos números existentes na propriedade números;<br>
+      Observação: Não deve ser possível adicionar valores não números na propriedade números;<br>
+      </p>
+        <script>
+         objeto = {
+           numeros: [],
+           adicionarNumeros:  function(p) {
+             if(!isNaN(p)){
+               this.numeros.push(p);
+             }
+           },
+           verificarPresença:function(valorDigitado){
+             for(var x in this.numeros){
+               if (this.numeros[x] == valorDigitado){
+                 alert("Este numero ja pertence ao array");
+               }
+             }
+           },
+           retornarPositivos:function(){
+             return this.numeros.filter(function(x) {
+               return x > 0;
+             });
+           },
+           retornarNegativos:function(){
+             return this.numeros.filter(function(x){
+                return x<0;
+             });
+           },
+           retornarNumerosPares:function(){
+             return this.numeros.filter(function(x){
+                return x % 2 == 0;
+             });
+           },
+           retornarNumerosImpares:function(){
+             return this.numeros.filter(function(x){
+                return x % 2 == 1;
+             });
+           },
+           retornarSomaDosNumeros:function(){
+            var soma = 0;
+            for(var x in this.numeros){
+            soma+=this.numeros[x];
+            }
+            return soma;
+           },
+         };
+        </script>
+
+  </body>
+</html>

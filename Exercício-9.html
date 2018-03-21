@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício9</title>
+  </head>
+  <body>
+    <p>Escreva uma função para ler 2 valores, o sistema deve validar e não permitir valores iguais, e então alertar o maior deles.</p>
+      <script>
+        function verificarMaiorNumero(x,y){
+          if (primeiroNumero > segundoNumero){
+            return primeiroNumero + " é maior";
+          }else{
+            return segundoNumero + " é maior";
+          }
+        }
+              var primeiroNumero = parseInt(prompt("Digite um número: "));
+            do{
+              var segundoNumero = parseInt(prompt("Digite outro número(NÃO REPETIDO):"));
+            }while (primeiroNumero == segundoNumero);
+              alert(verificarMaiorNumero(primeiroNumero,segundoNumero));
+      </script>
+
+  </body>
+</html>

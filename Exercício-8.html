@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício8</title>
+  </head>
+  <body>
+   <p>Escreva uma função que leia o código de origem de um produto, via prompt, e imprima na tela a região de sua procedência conforme a tabela abaixo:<br>
+     Código 1: Sul<br>
+     Código 2: Norte<br>
+     Código 3: Leste<br>
+     Código 4: Oeste<br>
+     Código 5 ou 6: Nordeste<br>
+     Código 7, 8 ou 9: Sudeste<br>
+     Código 10: Centro-Oeste<br>
+     Código 11: Noroeste<br>
+     Observação: Caso o código não seja nenhum dos especificados o produto deve ser encarado como Importado.</p>;
+       <script>
+         function verificarCodigoDoProduto(x){
+           if(x == 1){
+             return "Produto da Região Sul";
+           }else if(x == 2){
+             return "Produto da Região Norte";
+           }else if(x == 3){
+             return "Produto da Região Leste";
+           }else if(x == 4){
+             return "Produto da Região Oeste";
+           }else if(x == 5 || x == 6){
+             return "Produto da Região Nordeste";
+           }else if(x == 7 || x == 8 || x == 9){
+             return "Produto da Região Sudeste";
+           }else if (x == 10){
+             return "Produto da Região Centro-Oeste";
+           }else if (x == 11){
+             return "Produto da Região Noroeste";
+           }else if (x>11 || x<1){
+             return "Produto Importado";
+           }
+        }
+         do{
+          var numeroCodigo = prompt("Digite o numero do código do produto : ");
+        }while (numeroCodigo.charCodeAt(0)<=47 || numeroCodigo.charCodeAt(0)>=58);
+          alert(verificarCodigoDoProduto(numeroCodigo));
+       </script>
+  </body>
+</html>

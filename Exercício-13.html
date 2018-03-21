@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício13</title>
+  </head>
+  <body>
+      <p>Usando o objeto Date, crie um script que apresente a data no formato: dd/mm/aaaa.\</p>
+        <script>
+          data = new Date();
+          dia = data.getDate();
+          mes = data.getMonth()+1;
+          ano = data.getFullYear();
+
+          alert(dia + "/0" + mes + "/" + ano);
+        </script>
+  </body>
+</html>

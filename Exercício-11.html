@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício11</title>
+  </head>
+  <body>
+    <p>Escreva uma função que receba o array do exercício anterior e alerte a quantidade de elementos do array que são números negativos.</p>
+      <script>
+        function armazenarNoArray(){
+          var array = [];
+            for (var x=0; x<=9; x++){
+              array.push(prompt("Digite o " + x + "° número: "));
+              }
+                return array;
+          }
+          var arraynovo = armazenarNoArray();
+          function apresentarValoresNegativos(array){
+            var arrayNegativos = [];
+            for(var x in array){
+              if(array[x] < 0){
+                arrayNegativos.push(array[x]);
+              }
+            }
+            return 'Valores negativos:'+arrayNegativos;
+            }
+          alert(apresentarValoresNegativos(arraynovo));
+      </script>
+  </body>
+</html>

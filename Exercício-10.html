@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercício10</title>
+  </head>
+  <body>
+    <p>Escreva uma função que leia 10 valores numéricos, via input, e armazene-os num array.</p>
+      <script>
+        function armazenarNoArray(){
+          var array = [];
+            for (var x=1; x<=10; x++){
+              array.push(prompt("Digite o " + x + "° número: "));
+              }
+                return array;
+          }
+                alert('Numeros inseridos no vetor : ' + armazenarNoArray());
+      </script>
+  </body>
+</html>
